@@ -1,0 +1,23 @@
+<table border="1px"  cellpadding="10px" cellspacing="10px" >
+    <tr style="background-color: grey; font-style: inherit; color: white" >
+        <td>Name</td>
+        <td>City</td>
+        <td>Country</td>
+    </tr>
+    <tr><td colspan="2">{{money | currency}}</td></tr>
+    <tr><td colspan="2">{{money | currency:"INR"}}</td></tr>
+    <tr><td colspan="2">{{money | currency:"EUR"}}</td></tr>
+    <tr><td colspan="2">{{money | currency:"GBP"}}</td></tr>
+    <tr><td colspan="2">{{value | number}}</td></tr>
+    <tr><td colspan="2">{{value | number:"4.1-2"}}</td></tr>
+    <tr><td colspan="2">{{valueInPercentage | percent}}</td></tr>
+    <tr><td colspan="2">{{helloString | reverse}}</td></tr>
+    
+    
+    <tr *ngFor="let x of result.records; let i = index">
+            <td>{{x.Name | titlecase | reverse}}</td>
+            <td>{{x.City | uppercase |reverse}}</td>
+            <td>{{x.Country | lowercase | reverse}}</td>
+    </tr>
+
+</table>
